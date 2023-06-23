@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/liste_restaurant3">
+    <fragment
+        android:id="@+id/liste_restaurant3"
+        android:name="com.example.food_delivery_app.Fragments.liste_restaurant"
+        android:label="liste_restaurant" />
+    <fragment
+        android:id="@+id/loginFragment2"
+        android:name="com.example.food_delivery_app.loginFragment"
+        android:label="loginFragment" />
+    <activity
+        android:id="@+id/page_intro2"
+        android:name="com.example.food_delivery_app.Activities.page_intro2"
+        android:label="page_intro2" />
+</navigation>

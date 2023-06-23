@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout5"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.login">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <Button
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:width="220dp"
+        android:height="60dp"
+        android:backgroundTint="#EA2242"
+        android:text="Register"
+        android:textAllCaps="false"
+        android:textColor="#FFffffff"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="520dp"
+        android:width="220dp"
+        android:height="60dp"
+        android:backgroundTint="#EA2242"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:textColor="#FFffffff"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/texteAcceuil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:text="Rejoignez notre communauté"
+        android:textAlignment="center"
+        android:textColor="#F10027"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="105dp"
+        android:layout_height="119dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginBottom="104dp"
+        android:src="@drawable/logo1"
+        app:layout_constraintBottom_toTopOf="@+id/texteAcceuil"
+        app:layout_constraintStart_toEndOf="@+id/bck4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/bck2"
+        android:layout_width="329dp"
+        android:layout_height="316dp"
+        android:layout_marginEnd="208dp"
+        android:rotation="-170"
+        android:rotationX="-4"
+        android:rotationY="17"
+        android:src="@drawable/bck2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/bck4"
+        android:layout_width="137dp"
+        android:layout_height="307dp"
+        android:layout_marginEnd="296dp"
+        android:rotation="-166"
+        android:rotationX="12"
+        android:rotationY="-41"
+        android:src="@drawable/bck4"
+        app:layout_constraintBottom_toBottomOf="@+id/bck2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bck2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/bck3"
+        android:layout_width="511dp"
+        android:layout_height="165dp"
+        android:layout_marginStart="76dp"
+        android:rotation="91"
+        android:src="@drawable/bck3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

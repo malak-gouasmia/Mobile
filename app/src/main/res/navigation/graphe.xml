@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/graphe"
+    app:startDestination="@id/liste_restaurant">
+
+    <fragment
+        android:id="@+id/liste_restaurant"
+        android:name="com.example.food_delivery_app.Fragments.liste_restaurant"
+        android:label="liste_restaurant">
+        <action
+            android:id="@+id/action_liste_restaurant_to_liste_menu"
+            app:destination="@id/liste_menu" />
+    </fragment>
+    <fragment
+        android:id="@+id/liste_menu"
+        android:name="com.example.food_delivery_app.Fragments.liste_menu"
+        android:label="liste_menu">
+        <action
+            android:id="@+id/action_liste_menu_to_overviewFragment"
+            app:destination="@id/overviewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/validationFragment2"
+        android:name="com.example.food_delivery_app.validationFragment"
+        android:label="validationFragment">
+        <action
+            android:id="@+id/action_validationFragment2_to_liste_restaurant"
+            app:destination="@id/liste_restaurant" />
+    </fragment>
+    <fragment
+        android:id="@+id/overviewFragment"
+        android:name="com.example.food_delivery_app.overviewFragment"
+        android:label="overviewFragment">
+        <action
+            android:id="@+id/action_overviewFragment_to_checkoutFragment"
+            app:destination="@id/checkoutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.food_delivery_app.loginFragment"
+        android:label="loginFragment" />
+    <fragment
+        android:id="@+id/checkoutFragment"
+        android:name="com.example.food_delivery_app.checkoutFragment"
+        android:label="checkoutFragment">
+        <action
+            android:id="@+id/action_checkoutFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_checkoutFragment_to_validationFragment2"
+            app:destination="@id/validationFragment2" />
+    </fragment>
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="com.example.food_delivery_app.Activities.LoginActivity"
+        android:label="LoginActivity"
+        tools:layout="@layout/activity_login"/>
+
+    <activity
+        android:id="@+id/registerActivity"
+        android:name="com.example.food_delivery_app.Activities.RegisterActivity"
+        android:label="RegisterActivity"
+        tools:layout="@layout/activity_register"
+        />
+    <fragment
+        android:id="@+id/profileFragment2"
+        android:name="com.example.food_delivery_app.Fragments.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+
+</navigation>
