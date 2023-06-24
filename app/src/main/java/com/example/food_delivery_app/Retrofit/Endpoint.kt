@@ -1,9 +1,7 @@
 package com.example.food_delivery_app.Retrofit
 import com.example.food_delivery_app.Fragments.liste_menu
 import com.example.food_delivery_app.Fragments.liste_restaurant
-import com.example.food_delivery_app.Models.Rate
-import com.example.food_delivery_app.Models.menu
-import com.example.food_delivery_app.Models.restaurant
+import com.example.food_delivery_app.Models.*
 import com.example.food_delivery_app.Utils.Constant
 import retrofit2.Response
 import retrofit2.Retrofit;
@@ -31,7 +29,19 @@ interface Endpoint {
         @Body body: Rate
     ): Response<liste_menu>
 
-
+    @POST("users/login")
+    suspend fun login(
+        @Body body: Credentials
+    ): Response<user>
+    @POST("users/{id}")
+    suspend fun createToken(
+        @Path("id") id: String,
+        @Body body: Map<String, String>
+    ): Response<String>
+    @POST("users/register")
+    suspend fun register(
+        @Body body: user
+    ): Response<user>
     companion object {
         @Volatile
         var endpoint: Endpoint? = null

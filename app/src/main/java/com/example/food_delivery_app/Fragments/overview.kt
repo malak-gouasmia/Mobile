@@ -34,11 +34,11 @@ class overviewFragment : Fragment() {
         binding.apply {
             name.text= arg.name;
             price.text= arg.price.toString();
-          //  imageView3.setImageResource(arg.image);
-          //  description.text= arg.desciption;
-           // delivery.text= arg.deliveryTime;
-          //  nbRate.text= arg.nbRate.toString();
-           // size.text= arg.size;
+            //  imageView3.setImageResource(arg.image);
+            //  description.text= arg.desciption;
+            // delivery.text= arg.deliveryTime;
+            //  nbRate.text= arg.nbRate.toString();
+            // size.text= arg.size;
         }
         binding.addCart.setOnClickListener{
             val sharedPref= requireActivity().getSharedPreferences("my_preferences", Context.MODE_PRIVATE)
@@ -65,8 +65,8 @@ class overviewFragment : Fragment() {
                         idMenu = arg.id,
                         nom = arg.name,
                         price = arg.price,
-                      image="arg.name",
-                       // image = arg.image,
+                        image="arg.name",
+                        // image = arg.image,
                         quantity = binding.Amount.text.toString().toInt()
                     )
                 );
@@ -87,7 +87,7 @@ class overviewFragment : Fragment() {
                             arg.id,
                             arg.name,
                             arg.price,
-                           arg.image,
+                            arg.image,
                             binding.Amount.text.toString().toInt()
                         )
                     )

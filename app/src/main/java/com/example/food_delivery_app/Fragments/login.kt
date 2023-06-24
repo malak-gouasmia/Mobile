@@ -1,19 +1,13 @@
 package com.example.food_delivery_app
 
 import android.content.Context
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.Toast
-import androidx.navigation.fragment.findNavController
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.navigation.Navigation.findNavController
-import com.example.food_delivery_app.Activities.LoginActivity
-import com.example.food_delivery_app.Activities.RegisterActivity
+import androidx.navigation.findNavController
 import com.example.food_delivery_app.databinding.FragmentLoginBinding
 
 
@@ -52,15 +46,27 @@ class loginFragment : Fragment() {
             sharedPref.edit().putString("password", "test").apply()
             Toast.makeText(it.context,"user created!",Toast.LENGTH_LONG).show()
         }
-        val loginBtn = view.findViewById<Button>(R.id.login)
+       /* val loginBtn = view.findViewById<Button>(R.id.login)
         loginBtn.setOnClickListener {
             val intent = Intent(requireActivity(), LoginActivity::class.java)
             startActivity(intent)
         }
+
+
         val registerBtn = view.findViewById<Button>(R.id.register)
         registerBtn.setOnClickListener {
             val intent = Intent(requireActivity(), RegisterActivity::class.java)
             startActivity(intent)
+        }*/
+
+        binding.register.setOnClickListener{
+            it.findNavController().navigate(R.id.action_loginFragment_to_signUpFragment)
+        }
+        binding.login.setOnClickListener{
+            it.findNavController().navigate(R.id.action_loginFragment_to_signInFragment)
+        }
+        binding.skipp.setOnClickListener{
+            it.findNavController().navigate(R.id.action_loginFragment_to_liste_restaurant)
         }
     }
 

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/graphe"
-    app:startDestination="@id/liste_restaurant">
+    app:startDestination="@id/loginFragment">
 
     <fragment
         android:id="@+id/liste_restaurant"
@@ -40,7 +40,17 @@
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.example.food_delivery_app.loginFragment"
-        android:label="loginFragment" />
+        android:label="loginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_liste_restaurant"
+            app:destination="@id/liste_restaurant" />
+    </fragment>
     <fragment
         android:id="@+id/checkoutFragment"
         android:name="com.example.food_delivery_app.checkoutFragment"
@@ -69,5 +79,21 @@
         android:name="com.example.food_delivery_app.Fragments.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.food_delivery_app.Fragments.SignUpFragment"
+        android:label="SignUpFragment" >
+        <action
+            android:id="@+id/action_signUpFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.example.food_delivery_app.Fragments.SignInFragment"
+        android:label="SignInFragment" >
+        <action
+            android:id="@+id/action_signInFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+    </fragment>
 
 </navigation>
