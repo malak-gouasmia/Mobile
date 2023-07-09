@@ -15,7 +15,7 @@ import retrofit2.http.Path
 
 interface Endpoint {
 
-    @GET("res/1")
+    @GET("res")
     suspend fun getAllRestaurants(): retrofit2.Response<List<restaurant>>
 
     @GET("res/{id}/menu")

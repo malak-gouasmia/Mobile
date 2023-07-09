@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.FragmentActivity
 
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.food_delivery_app.MyDataBase
 
 //import com.example.food_delivery_app.databinding.OrderLayoutBinding
@@ -33,6 +34,7 @@ class orderAdapter(val activity:FragmentActivity, val list: List<order>) :
         holder.binding.apply {
             menuTitle.text= list[position].nom;
             price.text= list[position].price.toString();
+
             //menuImage.setImageResource(list[position].image);
             quantity.text= list[position].quantity.toString();
         }

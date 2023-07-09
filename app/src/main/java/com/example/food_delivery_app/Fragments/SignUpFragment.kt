@@ -52,9 +52,7 @@ class SignUpFragment : Fragment() {
     ): View {
         // Inflate the layout for this fragment
      binding = FragmentSignUpBinding.inflate(inflater, container, false)
-        //val bottomNavigationView =
-          //  requireActivity().findViewById<BottomNavigationView>(R.id.bottomNavigationView)
-        //bottomNavigationView.visibility = View.GONE
+
 
         return binding.root
     }
@@ -69,26 +67,7 @@ class SignUpFragment : Fragment() {
             }
         }
 
-     /*   binding.setOnClickListener {
-            val dialog = Dialog(requireActivity())
-            dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
-            dialog.window?.setBackgroundDrawable(ColorDrawable(Color.WHITE))
-            dialog.setContentView(R.layout.camera_dialog)
-            dialog.setCancelable(true)
-            dialog.show()
-            dialog.window?.findViewById<ImageView>(R.id.gallery_image)?.setOnClickListener {
-                if (ContextCompat.checkSelfPermission(
-                        requireActivity(),
-                        Manifest.permission.READ_EXTERNAL_STORAGE
-                    ) == PackageManager.PERMISSION_GRANTED
-                ) {
-                    openGallery()
-                } else {
-                    requestGalleryPermission()
-                }
-                dialog.cancel()
-            }
-        }*/
+
 
         binding.registerButton.setOnClickListener {
             val email = binding.adresseMailtexte2.text.toString()
@@ -111,14 +90,7 @@ class SignUpFragment : Fragment() {
         val galleryIntent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
         activityResultLauncher.launch(galleryIntent)
     }
-/*
-    private fun requestGalleryPermission() {
-        ActivityCompat.requestPermissions(
-            requireActivity(),
-            arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE),
-            pickImage
-        )
-    }*/
+
 
     private fun registerUser(email: String, password: String, username: String, phoneNumber: String, imageUri: String) {
         val exceptionHandler = CoroutineExceptionHandler { coroutineContext, throwable ->

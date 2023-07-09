@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.navigation.findNavController
 
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.food_delivery_app.R
 import com.example.food_delivery_app.databinding.MenuLayouatBinding
 import com.example.food_delivery_app.Models.menu
@@ -46,7 +47,9 @@ class menuAdapter (val ctx:Context, val data:List<menu>):
          //
           prix.text=data[position].price.toString()
             typeMenu.text=data[position].categorie.toString()
-
+            Glide.with(ctx)
+                .load(data[position].image)
+                .into(imageView)
        /*   imageView.setImageResource(data[position].image)*/
             typeMenu.text=data[position].categorie
           prix.text=data[position].price.toString()

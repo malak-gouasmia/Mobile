@@ -87,6 +87,7 @@ class overviewFragment : Fragment() {
                             arg.id,
                             arg.name,
                             arg.price,
+                          //  arg.description,
                             arg.image,
                             binding.Amount.text.toString().toInt()
                         )

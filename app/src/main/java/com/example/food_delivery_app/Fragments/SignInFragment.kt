@@ -89,7 +89,8 @@ class SignInFragment : Fragment() {
 
                     val token = FirebaseMessaging.getInstance().token.await()
                     println("token: $token")
-
+//val myid=1
+                    //data._id.toString()
                     val tokenResponse = Endpoint.createEndpoint().createToken(data._id.toString(), mapOf("token" to token))
                     if (!tokenResponse.isSuccessful) {
                         println("Error creating token")
